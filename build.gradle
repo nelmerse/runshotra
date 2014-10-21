@@ -3,7 +3,10 @@ buildscript {
         springBootVersion = '1.1.8.RELEASE'
     }
     repositories {
+        maven { url "http://repo.spring.io/libs-release" }
         mavenCentral()
+        mavenLocal()
+
     }
     dependencies {
         classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
@@ -17,13 +20,15 @@ apply plugin: 'spring-boot'
 
 jar {
     baseName = 'runshotra'
-    version = '0.0.1-SNAPSHOT'
+    version = '0.1.0'
 }
 sourceCompatibility = 1.8
 targetCompatibility = 1.8
 
 repositories {
+    mavenLocal()
     mavenCentral()
+    maven { url "http://repo.spring.io/libs-release" }
 }
 
 
@@ -36,6 +41,7 @@ dependencies {
     compile("org.springframework.boot:spring-boot-starter-social-twitter")
     testCompile("org.springframework.boot:spring-boot-starter-test")
     compile("com.h2database:h2:1.0.60")
+    testCompile("junit:junit")
 }
 
 eclipse {
