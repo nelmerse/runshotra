@@ -1,4 +1,4 @@
-package runshotra;
+package gameover;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
