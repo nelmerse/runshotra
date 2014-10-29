@@ -1,4 +1,4 @@
-package gameover;
+package runshotra;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
